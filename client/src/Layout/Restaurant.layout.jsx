@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { useDispatch } from "react-redux";import { TiStarOutline } from "react-icons/ti";
+import { useDispatch } from "react-redux"; import { TiStarOutline } from "react-icons/ti";
 import { RiDirectionLine, RiShareForwardLine } from "react-icons/ri";
 import { BiBookmarkPlus } from "react-icons/bi";
 
@@ -15,6 +15,7 @@ import CartContainer from "../Components/Cart/CartContainer";
 // Redux actions
 import { getSpecificRestaurant } from "../Redux/Reducer/restaurant/restaurant.action";
 import { getImage } from "../Redux/Reducer/Image/Image.action";
+import { getCart } from "../Redux/Reducer/Cart/Cart.action";
 
 const RestaurantLayout = (props) => {
 
@@ -38,6 +39,9 @@ const RestaurantLayout = (props) => {
         setRestaurant((prev) => ({ ...prev, ...data.payload.image }))
       );
     });
+
+    dispatch(getCart());
+
   }, []);
 
   return (
@@ -45,7 +49,7 @@ const RestaurantLayout = (props) => {
       {" "}
       <RestaurantNavbar />
       <div className="container mx-auto px-4 lg:px-20 pb-10">
-      <ImageGrid images={restaurant.images} />
+        <ImageGrid images={restaurant.images} />
         <RestaurantInfo
           name={restaurant?.name}
           restaurantRating={restaurant?.rating || 0}
@@ -68,7 +72,7 @@ const RestaurantLayout = (props) => {
           </InfoButtons>
         </div>
         <div className="my-10">
-        <TabContainer></TabContainer>
+          <TabContainer></TabContainer>
         </div>
         <div className="relative">{props.children}</div>
       </div>

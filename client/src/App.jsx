@@ -1,5 +1,7 @@
-import { Route, Redirect, Switch  } from "react-router-dom";
+import { Route, Redirect, Switch } from "react-router-dom";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import React, { useEffect } from "react";
 
 //import HOC
 import HomeLayoutHOC from "./HOC/Home.Hoc";
@@ -19,6 +21,8 @@ import Checkout from "./Page/Checkout";
 import RedirectRestaurant from "./Page/Restaurant/Redirect";
 import GoogleAuth from "./Page/GoogleAuth";
 
+import { getMyself } from "./Redux/Reducer/User/user.action";
+
 // axios global settings
 if (localStorage.zomatoUser) {
   const { token } = JSON.parse(localStorage.zomatoUser);
@@ -26,28 +30,34 @@ if (localStorage.zomatoUser) {
 }
 
 function App() {
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    if (localStorage.zomatoUser) dispatch(getMyself());
+  }, []);
+
   return (
-    <> 
-        <Route path="/" exact>
+    <>
+      <Route path="/" exact>
         <Redirect to="/delivery" />
-        </Route>
+      </Route>
 
-        <Route path="/restaurant/:id" 
-        exact 
-        component={RedirectRestaurant} 
-        />
+      <Route path="/restaurant/:id"
+        exact
+        component={RedirectRestaurant}
+      />
 
-        <HomeLayoutHOC path="/:type" 
-        exact 
-        component={Home} 
-        /> 
-        
-        <HomeLayoutHOC path="/google/:token" 
-        exact 
-        component={GoogleAuth} 
-        />
-        
-        <RestaurantLayoutHOC
+      <HomeLayoutHOC path="/:type"
+        exact
+        component={Home}
+      />
+
+      <HomeLayoutHOC path="/google/:token"
+        exact
+        component={GoogleAuth}
+      />
+
+      <RestaurantLayoutHOC
         path="/restaurant/:id/overview"
         exact
         component={Overview}
@@ -57,10 +67,10 @@ function App() {
         exact
         component={OrderOnline}
       />
-      <RestaurantLayoutHOC 
-        path="/restaurant/:id/menu" 
-        exact 
-        component={Menu} 
+      <RestaurantLayoutHOC
+        path="/restaurant/:id/menu"
+        exact
+        component={Menu}
       />
       <RestaurantLayoutHOC
         path="/restaurant/:id/reviews"
@@ -71,11 +81,11 @@ function App() {
         path="/restaurant/:id/photos"
         exact
         component={Photos}
-      /> 
-      <CheckoutLayoutHOC 
-        path="/checkout/orders" 
-        exact 
-        component={Checkout} 
+      />
+      <CheckoutLayoutHOC
+        path="/checkout/orders"
+        exact
+        component={Checkout}
       />
     </>
   );
