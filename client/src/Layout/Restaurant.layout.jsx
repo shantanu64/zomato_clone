@@ -17,6 +17,7 @@ import { getSpecificRestaurant } from "../Redux/Reducer/restaurant/restaurant.ac
 import { getImage } from "../Redux/Reducer/Image/Image.action";
 import { getCart } from "../Redux/Reducer/Cart/Cart.action";
 
+
 const RestaurantLayout = (props) => {
 
   const [restaurant, setRestaurant] = useState({
