@@ -64,7 +64,7 @@ const Overview = () => {
 
   useEffect(() => {
     if (reduxState) {
-      dispatch(getImage(reduxState?.menuImage)).then((data) => {
+      dispatch(getImage(reduxState?.menuImages)).then((data) => {
         const images = [];
         data?.payload?.image?.images.map(({ location }) => images.push(location));
         setMenuImages(images);
@@ -121,24 +121,24 @@ const Overview = () => {
             <div>
               <Slider {...settings}>
                 <MenuSimilarRestaurantcard
-                  image="https://b.zmtcdn.com/data/pictures/chains/5/18711475/4be376adb66b75764946d00a7dcf9991_featured_v2.jpg?output-format=webp"
-                  title="tea"
+                  image="https://media-cdn.tripadvisor.com/media/photo-w/1b/21/26/9a/img-20200305-wa0060-largejpg.jpg"
+                  title="Tanatan"
                 />
                 <MenuSimilarRestaurantcard
-                  image="https://b.zmtcdn.com/data/pictures/chains/5/18711475/4be376adb66b75764946d00a7dcf9991_featured_v2.jpg?output-format=webp"
-                  title="tea"
+                  image="https://d4t7t8y8xqo0t.cloudfront.net/resized/180X200/restaurant%2F223137%2F2979_1-01.jpg"
+                  title="JW Cafe"
                 />
                 <MenuSimilarRestaurantcard
-                  image="https://b.zmtcdn.com/data/pictures/chains/5/18711475/4be376adb66b75764946d00a7dcf9991_featured_v2.jpg?output-format=webp"
-                  title="tea"
+                  image="https://d4t7t8y8xqo0t.cloudfront.net/resized/180X200/restaurant%2F223186%2F3734_1-01.jpg"
+                  title="Romanos"
                 />
                 <MenuSimilarRestaurantcard
-                  image="https://b.zmtcdn.com/data/pictures/chains/5/18711475/4be376adb66b75764946d00a7dcf9991_featured_v2.jpg?output-format=webp"
-                  title="tea"
+                  image="https://d4t7t8y8xqo0t.cloudfront.net/resized/180X200/restaurant%2F223218%2Frestaurant020170315101831.png"
+                  title="Peshwa Pavillion"
                 />
                 <MenuSimilarRestaurantcard
-                  image="https://b.zmtcdn.com/data/pictures/chains/5/18711475/4be376adb66b75764946d00a7dcf9991_featured_v2.jpg?output-format=webp"
-                  title="tea"
+                  image="https://d4t7t8y8xqo0t.cloudfront.net/resized/180X200/restaurant%2F657448%2Frestaurant120181010133050.jpg"
+                  title="Ummrao"
                 />
               </Slider>
             </div>

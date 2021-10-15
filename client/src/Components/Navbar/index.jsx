@@ -104,7 +104,7 @@ const LargeNav = ({ SignIn, SignUp }) => {
               </span>
               <input
                 type="text"
-                placeholder="Bengaluru"
+                placeholder="Mumbai"
                 className=" focus:outline-none"
               />
               <IoMdArrowDropdown />
@@ -134,7 +134,7 @@ const LargeNav = ({ SignIn, SignUp }) => {
               </div>
               {isDropDownOpen && (
                 <div className="absolute shadow-lg py-3  -right-4 w-full bg-white z-30 flex flex-col gap-2">
-                  <button onClick={signOutHandler}>Sign Out</button>
+                  <button onClick={signOutHandler}>SIGN OUT</button>
                 </div>
               )}
             </div>
@@ -144,13 +144,13 @@ const LargeNav = ({ SignIn, SignUp }) => {
                 onClick={SignIn}
                 className="text-gray-500 text-xl hover:text-gray-800"
               >
-                Login
+                LOGIN
               </button>
               <button
                 onClick={SignUp}
                 className="text-gray-500 text-xl hover:text-gray-800"
               >
-                Signup
+                SIGNUP
               </button>
             </div>
           )}

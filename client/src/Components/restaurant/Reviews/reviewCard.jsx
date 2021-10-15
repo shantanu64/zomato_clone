@@ -22,7 +22,7 @@ const ReviewCard = (props) => {
           <div className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-full">
               <img
-                src="https://b.zmtcdn.com/data/user_profile_pictures/d76/cc84183f68cc34027812bdf62585cd76.jpg?fit=around%7C100%3A100&crop=100%3A100%3B%2A%2C%2A"
+                src="https://www.pngfind.com/pngs/m/470-4703547_icon-user-icon-hd-png-download.png"
                 alt="avatar"
                 className="w-full h-full rounded-full object-cover"
               />

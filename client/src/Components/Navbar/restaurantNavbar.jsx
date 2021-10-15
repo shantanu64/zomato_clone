@@ -18,7 +18,7 @@ const MobileNav = ({ SignIn, SignUp }) => {
     <div className="flex w-full items-center justify-between lg:hidden">
       <AiOutlineArrowLeft />
       <div className="w-28">
-        <img
+          <img
           src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png"
           alt="logo"
           className="w-full h-full"
@@ -43,7 +43,7 @@ const MobileNav = ({ SignIn, SignUp }) => {
             </div>
             {isDropDownOpen && (
               <div className="absolute shadow-lg py-3 -bottom-20 -right-4 w-full bg-white z-20 flex flex-col gap-2">
-                <button>Sign Out</button>
+                <button>SIGN OUT</button>
               </div>
             )}
           </>
@@ -91,7 +91,7 @@ const LargeNav = ({ SignIn, SignUp }) => {
               </span>
               <input
                 type="text"
-                placeholder="Bengaluru"
+                placeholder="Mumbai"
                 className=" focus:outline-none"
               />
               <IoMdArrowDropdown />
@@ -130,13 +130,13 @@ const LargeNav = ({ SignIn, SignUp }) => {
                 onClick={SignIn}
                 className="text-gray-500 text-xl hover:text-gray-800"
               >
-                Login
+                LOGIN
               </button>
               <button
                 onClick={SignUp}
                 className="text-gray-500 text-xl hover:text-gray-800"
               >
-                Signup
+                SIGNUP
               </button>
             </div>
           )}
