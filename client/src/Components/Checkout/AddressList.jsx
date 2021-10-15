@@ -15,15 +15,13 @@ export default function AddressList(props) {
                 key={item.name}
                 value={item.name}
                 className={({ active, checked }) =>
-                  `${
-                    active
-                      ? "ring-2 ring-offset-2 ring-offset-zomato-300 ring-white ring-opacity-60"
-                      : ""
+                  `${active
+                    ? "ring-2 ring-offset-2 ring-offset-zomato-300 ring-white ring-opacity-60"
+                    : ""
                   }
-                  ${
-                    checked
-                      ? "bg-zomato-100 bg-opacity-75 text-zomato-600"
-                      : "bg-white"
+                  ${checked
+                    ? "bg-zomato-100 bg-opacity-75 text-zomato-600"
+                    : "bg-white"
                   }
                     relative rounded-lg shadow-md px-5 py-4 cursor-pointer flex focus:outline-none`
                 }
@@ -35,17 +33,15 @@ export default function AddressList(props) {
                         <div className="text-sm">
                           <RadioGroup.Label
                             as="p"
-                            className={`font-medium  ${
-                              checked ? "text-zomato-600" : "text-gray-900"
-                            }`}
+                            className={`font-medium  ${checked ? "text-zomato-600" : "text-gray-900"
+                              }`}
                           >
                             {item.name}
                           </RadioGroup.Label>
                           <RadioGroup.Description
                             as="span"
-                            className={`inline ${
-                              checked ? "text-zomato-500" : "text-gray-500"
-                            }`}
+                            className={`inline ${checked ? "text-zomato-500" : "text-gray-500"
+                              }`}
                           >
                             <address>{item.address}</address>
                           </RadioGroup.Description>
