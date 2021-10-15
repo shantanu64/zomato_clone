@@ -26,7 +26,6 @@ Router.get("/", async (req, res) => {
 
         const {city} = req.query;
         const restaurants = await RestaurantModel.find({city});
-
         return res.json({restaurants});
 
     } catch (error) {

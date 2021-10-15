@@ -31,7 +31,7 @@ const OrderOnline = () => {
   useEffect(() => {
     reduxState &&
       dispatch(getFoodList(reduxState.menu)).then((data) =>
-        setMenu(data.payload.menus.menus)
+        setMenu(data?.payload?.menus?.menus)
       );
   }, [reduxState]);
 
@@ -41,7 +41,7 @@ const OrderOnline = () => {
     <>
       <div className="w-full h-screen flex">
         <aside className="hidden md:flex flex-col gap-3 border-r overflow-y-scroll border-gray-200 h-screen w-1/4">
-        {menu.map((item) => (
+        {menu?.map((item) => (
             <MenuListContainer
               {...item}
               key={item._id}
@@ -58,7 +58,7 @@ const OrderOnline = () => {
             </h4>
           </div>
           <section className="flex  h-screen overflow-y-scroll flex-col gap-3 md:gap-5">
-          {menu.map((item) => (
+          {menu?.map((item) => (
               <FoodList key={item._id} {...item} />
             ))}
           </section>
