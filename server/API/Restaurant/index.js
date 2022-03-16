@@ -87,6 +87,17 @@ Router.get("/search", async (req,res) => {
     }
 });
 
+// @Route   POST /restaurants/new
+// @des     add new restaurant
+// @access  PRIVATE
+Router.post("/new", passport.authenticate("jwt"), async (req, res) => {
+    try {
+      const newRetaurant = await RestaurantModel.create(req.body.retaurantData);
+      return res.json({ restaurants: newRetaurant });
+    } catch (error) {
+      return res.status(500).json({ error: error.message });
+    }
+  });
 
 
 export default Router;

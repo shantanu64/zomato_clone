@@ -13,11 +13,12 @@ const Navbar = () => {
           <div className="flex w-full items-center justify-between ">
             <AiOutlineArrowLeft />
             <div className="w-28">
-              <img
+              {/* <img
                 src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png"
                 alt="logo"
                 className="w-full h-full"
-              />
+              /> */}
+              <h1 className="font-black text-2xl">FoodBae</h1>
             </div>
             <div className="flex items-center gap-3">
               <div className="border p-2 border-gray-300 text-zomato-400 w-20 h-20 rounded-full">

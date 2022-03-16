@@ -27,11 +27,12 @@ const MobileNav = ({ SignIn, SignUp }) => {
 
   return (
     <div className="flex w-full items-center justify-between lg:hidden">      <div className="w-28">
-      <img
+      {/* <img
         src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png"
         alt="logo"
         className="w-full h-full"
-      />
+      /> */}
+      <h1 className="font-black">FoodBae</h1>
     </div>
       <div className="flex items-center gap-3 relative">
         <button className="bg-zomato-400 text-white py-2 px-3 rounded-full">
@@ -91,11 +92,12 @@ const LargeNav = ({ SignIn, SignUp }) => {
       <div className="hidden lg:inline container px-20 mx-auto">
         <div className="hidden gap-4 w-full items-center justify-around lg:flex ">
           <div className="w-28">
-            <img
+            {/* <img
               src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png"
               alt="logo"
               className="w-full h-full"
-            />
+            /> */}
+            <h1 className="font-black text-2xl">FoodBae</h1>
           </div>
           <div className=" w-3/4 bg-white shadow-md p-3 flex items-center gap-3  border border-gray-200 rounded">
             <div className="flex items-center gap-2 border-r-2 border-gray-300 pr-2">

@@ -37,10 +37,8 @@ const Checkout = () => {
         reduxStateCart.reduce((acc, curVal) => acc + curVal.totalPrice, 0) *
         100,
       currency: "INR",
-      name: "zomato Clone",
+      name: "FoodBae",
       description: "Food Payment",
-      image:
-        "https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png",
 
       handler: () => {
         alert("Payment Done");
@@ -65,8 +63,8 @@ const Checkout = () => {
         <div className="flex w-full  flex-col gap-2 items-center">
           <h5 className="text-base tracking-wider">ORDER FROM</h5>
           <div className="flex w-full  flex-col items-center text-gray-400">
-            <h4>Domino's Pizza</h4>
-            <small>GT World Mall, Magadi Road, Bangalore</small>
+            <h4>Bhagat Tarachand</h4>
+            <small>Mumbai</small>
           </div>
           <div className="my-4 h-32 overflow-y-scroll px-4 flex flex-col gap-2 w-full md:w-3/5 ">
             {reduxStateCart.map((food) => (
